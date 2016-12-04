@@ -1,0 +1,16 @@
+version: '2'
+services:
+  teamcity:
+    build: .
+    container_name: teamcity
+    mem_limit: 4800m
+    memswap_limit: 5g
+    cpu_shares: 90
+    restart: always
+    domainname: tajwal.local
+    hostname: teamcity
+    ports:
+      - "8111:8111" # ssh
+      - "222:22" # https
+    volumes:
+      - /data/teamcity.tajawal.local:/var/lib/teamcity
