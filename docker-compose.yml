@@ -7,10 +7,10 @@ services:
     memswap_limit: 5g
     cpu_shares: 90
     restart: always
-    domainname: tajwal.local
+    domainname: anmol.local
     hostname: teamcity
     ports:
       - "8111:8111" # ssh
       - "222:22" # https
     volumes:
-      - /data/teamcity.tajawal.local:/var/lib/teamcity
+      - /data/teamcity.anmol.local:/var/lib/teamcity
